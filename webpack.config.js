@@ -43,6 +43,14 @@ if (process.env.NODE_ENV !== 'production') {
   config.entry.splice(1, 0, 'webpack/hot/dev-server');
   config.plugins.push(HotReloader);
   config.devServer.hot = true;
+} else {
+  config.plugins.push(new webpack.DefinePlugin({
+    'process.env': {
+      'NODE_ENV': JSON.stringify('production')
+    }
+  }));
+  config.devtool = "cheap-module-source-map";
+  config.output.path = "prod";
 }
 
 module.exports = config;
