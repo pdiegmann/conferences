@@ -15,10 +15,10 @@ class ConferenceTableLine extends Component {
         <TableRowColumn><TimeWrapper value={this.props.conference.dates.ending}/></TableRowColumn>
         <TableRowColumn>{this.props.conference.location.city}, {this.props.conference.location.country}</TableRowColumn>
         <TableRowColumn>
-          <ExternalLink text={<IconWrapper icon="home" />} url="http://icis2017.aisnet.org" />
-          <ExternalLink text={<IconWrapper icon="message" />} url="http://icis2017.aisnet.org/submissions/call-for-papers/" />
-          <ExternalLink text={<IconWrapper icon="format_list_numbered" />} url="http://icis2017.aisnet.org/submissions/tracks/" />
-          <ExternalLink text={<IconWrapper icon="schedule" />} url="http://icis2017.aisnet.org/schedule-program/important-dates/" />
+          <ExternalLink text={<IconWrapper icon="home" />} url={this.props.conference.urls.main} />
+          <ExternalLink text={<IconWrapper icon="message" />} url={this.props.conference.urls.cfp} />
+          <ExternalLink text={<IconWrapper icon="format_list_numbered" />} url={this.props.conference.urls.tracks} />
+          <ExternalLink text={<IconWrapper icon="schedule" />} url={this.props.conference.urls.dates} />
           <ExternalLink text={<IconWrapper icon="map" />} url={this.props.conference.location.venueUrl} />
         </TableRowColumn>
       </TableRow>
