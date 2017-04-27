@@ -1,92 +1,92 @@
-[
-  {
-    "name": "International Conference on Information Systems",
-    "short": "ICIS",
-    "number": 2017,
-    "location": {
-      "country": "South Korea",
-      "city": "Seoul",
-      "venueUrl": "https://www.google.com/maps/place/Sheraton+Boston+Hotel/@42.3463946,-71.0864695,14z",
-      "region": 3
-    },
-    "dates": {
-      "deadline": 1493942400000,
-      "starting": 1512864000000,
-      "ending": 1513123200000
-    },
-    "urls": {
-      "main": "http://icis2017.aisnet.org",
-      "cfp": "http://icis2017.aisnet.org/submissions/call-for-papers/",
-      "schedule": "http://icis2017.aisnet.org/schedule-program/important-dates/",
-      "tracks": "http://icis2017.aisnet.org/submissions/tracks/",
-      "dates": "http://icis2017.aisnet.org/schedule-program/important-dates/"
-    }
-  },{
-    "name": "Americas Conference on Information Systems",
-    "short": "AMCIS",
-    "number": 2017,
-    "location": {
-      "country": "USA",
-      "city": "Boston, MA",
-      "venueUrl": "https://www.google.com/maps/place/Sheraton+Boston+Hotel/@42.3463946,-71.0864695,14z",
-      "region": 1
-    },
-    "dates": {
-      "deadline": 1488326400000,
-      "starting": 1502323200000,
-      "ending": 1502496000000
-    },
-    "urls": {
-      "main": "http://amcis2017.aisnet.org",
-      "cfp": "http://amcis2017.aisnet.org/submissions/call-for-papers/",
-      "schedule": "http://amcis2017.aisnet.org/schedule-program/",
-      "tracks": "http://amcis2017.aisnet.org/submissions/track-descriptions/",
-      "dates": "http://amcis2017.aisnet.org/sumbissions/timeline/"
-    }
-  },
-  {
-    "name": "Pacific Asia Conference on Information Systems",
-    "short": "PACIS",
-    "number": 2017,
-    "location": {
-      "country": "Malaysia",
-      "city": "Langkawi",
-      "venueUrl": "https://www.google.de/maps/place/Meritus+Pelangi+Beach+Resort+%26+Spa,+Langkawi/@6.2992534,99.718698,14z",
-      "region": 3
-    },
-    "dates": {
-      "deadline": 1487376000000,
-      "starting": 1497916800000,
-      "ending": 1502496000000
-    },
-    "urls": {
-      "main": "http://www.pacis2017.org",
-      "cfp": "http://pacis2017.my-ais.org/index.php/submission/call-for-paper/",
-      "schedule": "http://pacis2017.my-ais.org/index.php/programme/schedule/",
-      "tracks": "http://pacis2017.my-ais.org/index.php/submission/conference-tracks/",
-      "dates": "http://pacis2017.my-ais.org/index.php/about-pacis-2017/important-dates/"
-    }
-  },{
-    "name": "European Conference on Information Systems",
-    "short": "ECIS",
-    "number": 2017,
-    "location": {
-      "country": "Portugal",
-      "city": "Guimarães",
-      "venueUrl": "http://www.ecis2017.eu/venue/",
-      "region": 2
-    },
-    "dates": {
-      "deadline": 1480723200000,
-      "starting": 1493942400000,
-      "ending": 1494374400000
-    },
-    "urls": {
-      "main": "http://www.ecis2017.eu",
-      "cfp": "http://www.ecis2017.eu/call-for-research-papers/",
-      "schedule": "http://www.ecis2017.eu/ecis2017-program/",
-      "tracks": "http://www.ecis2017.eu/tracks/",
-      "dates": "http://www.ecis2017.eu/important-dates/"
-    }
-  }
+[{
+		"name": "International Conference on Information Systems",
+		"short": "ICIS",
+		"number": 2017,
+		"location": {
+			"country": "South Korea",
+			"city": "Seoul",
+			"venueUrl": "https://www.google.com/maps/place/Sheraton+Boston+Hotel/@42.3463946,-71.0864695,14z",
+			"region": 3
+		},
+		"dates": {
+			"deadline": 1493942400000,
+			"starting": 1512864000000,
+			"ending": 1513123200000
+		},
+		"urls": {
+			"main": "http://icis2017.aisnet.org",
+			"cfp": "http://icis2017.aisnet.org/submissions/call-for-papers/",
+			"schedule": "http://icis2017.aisnet.org/schedule-program/important-dates/",
+			"tracks": "http://icis2017.aisnet.org/submissions/tracks/",
+			"dates": "http://icis2017.aisnet.org/schedule-program/important-dates/"
+		}
+	}, {
+		"name": "Americas Conference on Information Systems",
+		"short": "AMCIS",
+		"number": 2017,
+		"location": {
+			"country": "USA",
+			"city": "Boston, MA",
+			"venueUrl": "https://www.google.com/maps/place/Sheraton+Boston+Hotel/@42.3463946,-71.0864695,14z",
+			"region": 1
+		},
+		"dates": {
+			"deadline": 1488326400000,
+			"starting": 1502323200000,
+			"ending": 1502496000000
+		},
+		"urls": {
+			"main": "http://amcis2017.aisnet.org",
+			"cfp": "http://amcis2017.aisnet.org/submissions/call-for-papers/",
+			"schedule": "http://amcis2017.aisnet.org/schedule-program/",
+			"tracks": "http://amcis2017.aisnet.org/submissions/track-descriptions/",
+			"dates": "http://amcis2017.aisnet.org/sumbissions/timeline/"
+		}
+	},
+	{
+		"name": "Pacific Asia Conference on Information Systems",
+		"short": "PACIS",
+		"number": 2017,
+		"location": {
+			"country": "Malaysia",
+			"city": "Langkawi",
+			"venueUrl": "https://www.google.de/maps/place/Meritus+Pelangi+Beach+Resort+%26+Spa,+Langkawi/@6.2992534,99.718698,14z",
+			"region": 3
+		},
+		"dates": {
+			"deadline": 1487376000000,
+			"starting": 1497916800000,
+			"ending": 1502496000000
+		},
+		"urls": {
+			"main": "http://www.pacis2017.org",
+			"cfp": "http://pacis2017.my-ais.org/index.php/submission/call-for-paper/",
+			"schedule": "http://pacis2017.my-ais.org/index.php/programme/schedule/",
+			"tracks": "http://pacis2017.my-ais.org/index.php/submission/conference-tracks/",
+			"dates": "http://pacis2017.my-ais.org/index.php/about-pacis-2017/important-dates/"
+		}
+	},
+	{
+		"name": "European Conference on Information Systems",
+		"short": "ECIS",
+		"number": 2017,
+		"location": {
+			"country": "Portugal",
+			"city": "Guimarães",
+			"venueUrl": "http://www.ecis2017.eu/venue/",
+			"region": 2
+		},
+		"dates": {
+			"deadline": 1480723200000,
+			"starting": 1493942400000,
+			"ending": 1494374400000
+		},
+		"urls": {
+			"main": "http://www.ecis2017.eu",
+			"cfp": "http://www.ecis2017.eu/call-for-research-papers/",
+			"schedule": "http://www.ecis2017.eu/ecis2017-program/",
+			"tracks": "http://www.ecis2017.eu/tracks/",
+			"dates": "http://www.ecis2017.eu/important-dates/"
+		}
+	}
 ]
