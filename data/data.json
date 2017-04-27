@@ -42,6 +42,50 @@
       "schedule": "http://amcis2017.aisnet.org/schedule-program/",
       "tracks": "http://amcis2017.aisnet.org/submissions/track-descriptions/",
       "dates": "http://amcis2017.aisnet.org/sumbissions/timeline/"
+    },{
+      "name": "Pacific Asia Conference on Information Systems",
+      "short": "PACIS",
+      "number": 2017,
+      "location": {
+        "country": "Malaysia",
+        "city": "Langkawi",
+        "venueUrl": "https://www.google.de/maps/place/Meritus+Pelangi+Beach+Resort+%26+Spa,+Langkawi/@6.2992534,99.718698,14z",
+        "region": 3
+      },
+      "dates": {
+        "deadline": 1487376000000,
+        "starting": 1497916800000,
+        "ending": 1502496000000
+      },
+      "urls": {
+        "main": "http://www.pacis2017.org",
+        "cfp": "http://pacis2017.my-ais.org/index.php/submission/call-for-paper/",
+        "schedule": "http://pacis2017.my-ais.org/index.php/programme/schedule/",
+        "tracks": "http://pacis2017.my-ais.org/index.php/submission/conference-tracks/",
+        "dates": "http://pacis2017.my-ais.org/index.php/about-pacis-2017/important-dates/"
+      }
+    },{
+      "name": "European Conference on Information Systems",
+      "short": "ECIS",
+      "number": 2017,
+      "location": {
+        "country": "Portugal",
+        "city": "Guimarães",
+        "venueUrl": "http://www.ecis2017.eu/venue/",
+        "region": 2
+      },
+      "dates": {
+        "deadline": 1480723200000,
+        "starting": 1493942400000,
+        "ending": 1494374400000
+      },
+      "urls": {
+        "main": "http://www.ecis2017.eu",
+        "cfp": "http://www.ecis2017.eu/call-for-research-papers/",
+        "schedule": "http://www.ecis2017.eu/ecis2017-program/",
+        "tracks": "http://www.ecis2017.eu/tracks/",
+        "dates": "http://www.ecis2017.eu/important-dates/"
+      }
     }
   }
 ]
