@@ -29,6 +29,7 @@ class App extends Component {
   componentDidMount() {
     fetch("https://raw.githubusercontent.com/pdiegmann/conferences/master/data/data.json")
       .then((response) => {
+        console.log(response);
         if (response.status !== 200) {
           throw new Error("Bad Response!");
         }
@@ -81,7 +82,7 @@ class App extends Component {
             let thisYear = new Date().getFullYear();
             let firstDay = new Date(thisYear, 0, 1).getTime();
             let lastDay = new Date(thisYear, 11, 31).getTime();
-            if (conference.dates.starting > lastDay || conference.dates.ending < firstDay) return false;
+            if (conference.dates.deadline > lastDay || conference.dates.deadline < firstDay) return false;
           }
           break;
 
