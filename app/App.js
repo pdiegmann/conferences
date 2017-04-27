@@ -7,12 +7,11 @@ import Paper from 'material-ui/Paper';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import data from '../data/data.json'
-
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      data: [],
       filter: {
         conference: "ALL",
         timeline: "UPCOMING",
@@ -27,8 +26,23 @@ class App extends Component {
     injectTapEventPlugin();
   }
 
+  componentDidMount() {
+    fetch("https://raw.githubusercontent.com/pdiegmann/conferences/master/data/data.json")
+      .then((response) => {
+        if (response.status !== 200) {
+          throw new Error("Bad Response!");
+        }
+
+        return response.json();
+      }).then((data) => {
+        if (data) {
+          this.setState({data:data});
+        }
+      });
+  }
+
   render() {
-    let filteredData = data.filter((conference) => {
+    let filteredData = this.state.data.filter((conference) => {
       if (this.state.filter.conference !== "ALL" && this.state.filter.conference !== conference.short) return false;
 
       if (this.state.filter.region !== "ALL" && this.state.filter.region !== conference.location.region) return false;
