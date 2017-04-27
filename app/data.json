@@ -1,0 +1,45 @@
+[
+  {
+    "name": "International Conference on Information Systems",
+    "short": "ICIS",
+    "number": 2017,
+    "location": {
+      "country": "South Korea",
+      "city": "Seoul",
+      "venueUrl": "https://www.google.com/maps/place/Sheraton+Boston+Hotel/@42.3463946,-71.0864695,14z",
+      "region": 3
+    },
+    "dates": {
+      "deadline": 1493942400000,
+      "starting": 1512864000000,
+      "ending": 1513123200000
+    },
+    "urls": {
+      "main": "http://icis2017.aisnet.org",
+      "cfp": "http://icis2017.aisnet.org/submissions/call-for-papers/",
+      "tracks": "http://icis2017.aisnet.org/submissions/tracks/",
+      "dates": "http://icis2017.aisnet.org/schedule-program/important-dates/"
+    }
+  },{
+    "name": "Americas Conference on Information Systems",
+    "short": "AMCIS",
+    "number": 2017,
+    "location": {
+      "country": "USA",
+      "city": "Boston, MA",
+      "venueUrl": "https://www.google.com/maps/place/Sheraton+Boston+Hotel/@42.3463946,-71.0864695,14z",
+      "region": 1
+    },
+    "dates": {
+      "deadline": 1493942400000,
+      "starting": 1512864000000,
+      "ending": 1513123200000
+    },
+    "urls": {
+      "main": "http://amcis2017.aisnet.org",
+      "cfp": "http://amcis2017.aisnet.org/submissions/call-for-papers/",
+      "tracks": "http://amcis2017.aisnet.org/submissions/tracks/",
+      "dates": "http://amcis2017.aisnet.org/schedule-program/important-dates/"
+    }
+  }
+]
