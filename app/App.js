@@ -7,15 +7,17 @@ import Paper from 'material-ui/Paper';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
+const ALL = "ALL";
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       data: [],
       filter: {
-        conference: "ALL",
+        conference: [ALL],
         timeline: "UPCOMING",
-        region: "ALL"
+        region: [ALL]
       }
     };
   }
@@ -44,9 +46,9 @@ class App extends Component {
 
   render() {
     let filteredData = this.state.data.filter((conference) => {
-      if (this.state.filter.conference !== "ALL" && this.state.filter.conference !== conference.short) return false;
+      if (!this.state.filter.conference.includes(ALL) && !this.state.filter.conference.includes(conference.short)) return false;
 
-      if (this.state.filter.region !== "ALL" && this.state.filter.region !== conference.location.region) return false;
+      if (!this.state.filter.region.includes(ALL) && !this.state.filter.region.includes(conference.location.region)) return false;
 
       let now = new Date().getTime();
       switch (this.state.filter.timeline) {
@@ -89,7 +91,7 @@ class App extends Component {
         default:
           return false;
 
-        case "ALL":
+        case ALL:
           break;
       }
 
@@ -99,7 +101,7 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <Paper zDepth={1}>
-          <Menu onFilterChanged={this.handleFilterChanged} />
+          <Menu filter={this.state.filter} onFilterChanged={this.handleFilterChanged} />
           <ConferenceTable conferences={filteredData} filter={this.state.filter} />
         </Paper>
       </MuiThemeProvider>
