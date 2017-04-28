@@ -88,5 +88,51 @@
 			"tracks": "http://www.ecis2017.eu/tracks/",
 			"dates": "http://www.ecis2017.eu/important-dates/"
 		}
+	},
+	{
+	  "name": "International Conference on Information Systems",
+	  "short": "ICIS",
+	  "number": 2016,
+	  "location": {
+	    "country": "Ireland",
+	    "city": "Dublin",
+	    "venueUrl": "http://icis2016.aisnet.org/venue/conference-venue/",
+	    "region": 2
+	  },
+	  "dates": {
+	    "deadline": 1481479360000,
+	    "starting": 1462726960000,
+	    "ending": 1481738560000
+	  },
+	  "urls": {
+	    "main": "http://icis2016.aisnet.org",
+	    "cfp": "http://icis2016.aisnet.org",
+	    "schedule": "http://icis2016.aisnet.org/mobile-app",
+	    "tracks": "http://icis2016.aisnet.org/call-dates/tracks/",
+	    "dates": "http://icis2016.aisnet.org/call-dates/important-dates/"
+	  }
+	},
+	{
+	  "name": "European Conference on Information Systems",
+	  "short": "ECIS",
+	  "number": 2016,
+	  "location": {
+	    "country": "Turkey",
+	    "city": "Istanbul",
+	    "venueUrl": "http://www.ecis2016.com/Venue.html",
+	    "region": 2
+	  },
+	  "dates": {
+	    "deadline": 1489255664000,
+	    "starting": 1481047583000,
+	    "ending": 1488823606000
+	  },
+	  "urls": {
+	    "main": "http://www.ecis2016.com",
+	    "cfp": "http://www.ecis2016.com/EVENTS-AND-SUBMISSION-CALLS.html",
+	    "schedule": "http://www.ecis2016.com/PROGRAM.html",
+	    "tracks": "http://www.ecis2016.com",
+	    "dates": "http://www.ecis2016.com/DEADLINES.html"
+	  }
 	}
 ]
