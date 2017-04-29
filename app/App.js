@@ -18,40 +18,23 @@ class App extends Component {
         conference: [ALL],
         timeline: "UPCOMING",
         region: [ALL]
-      }
+      },
+      filteredData: []
     };
   }
 
-  handleFilterChanged = (filter) => this.setState({filter: filter});
+  handleFilterChanged = (filter) => {
+    this.updateData(this.state.data, filter);
+  };
 
-  componentWillMount() {
-    injectTapEventPlugin();
-  }
+  updateData(data, filter) {
+    let filteredData = data.filter((conference) => {
+      if (!filter.conference.includes(ALL) && !filter.conference.includes(conference.short)) return false;
 
-  componentDidMount() {
-    fetch("https://raw.githubusercontent.com/pdiegmann/conferences/master/data/data.json")
-      .then((response) => {
-        console.log(response);
-        if (response.status !== 200) {
-          throw new Error("Bad Response!");
-        }
-
-        return response.json();
-      }).then((data) => {
-        if (data) {
-          this.setState({data:data});
-        }
-      });
-  }
-
-  render() {
-    let filteredData = this.state.data.filter((conference) => {
-      if (!this.state.filter.conference.includes(ALL) && !this.state.filter.conference.includes(conference.short)) return false;
-
-      if (!this.state.filter.region.includes(ALL) && !this.state.filter.region.includes(conference.location.region)) return false;
+      if (!filter.region.includes(ALL) && !filter.region.includes(conference.location.region)) return false;
 
       let now = new Date().getTime();
-      switch (this.state.filter.timeline) {
+      switch (filter.timeline) {
         case "UPCOMING":
           if (conference.dates.starting < now) return false;
           break;
@@ -98,11 +81,54 @@ class App extends Component {
       return true;
     });
 
+    filteredData.sort((a, b) => {
+      if (a.dates.starting > b.dates.starting) return 1;
+      else if (a.dates.starting < b.dates.starting) return -1;
+
+      if (a.dates.deadline > b.dates.deadline) return 1;
+      else if (a.dates.deadline < b.dates.deadline) return -1;
+
+      if (a.dates.short > b.dates.short) return 1;
+      else if (a.dates.short < b.dates.short) return -1;
+      else return 0;
+    });
+
+    console.log(filter);
+    console.log(data);
+    console.log(filteredData);
+
+    this.setState({
+      filter: filter,
+      data: data,
+      filteredData: filteredData
+    });
+  }
+
+  componentWillMount() {
+    injectTapEventPlugin();
+  }
+
+  componentDidMount() {
+    fetch("https://raw.githubusercontent.com/pdiegmann/conferences/master/data/data.json")
+      .then((response) => {
+        if (response.status !== 200) {
+          throw new Error("Bad Response!");
+        }
+
+        return response.json();
+      }).then((data) => {
+        if (data) {
+          this.updateData(data, this.state.filter);
+        }
+      });
+  }
+
+  render() {
     return (
       <MuiThemeProvider>
         <Paper zDepth={1}>
           <Menu filter={this.state.filter} onFilterChanged={this.handleFilterChanged} />
-          <ConferenceTable conferences={filteredData} filter={this.state.filter} />
+          <ConferenceTable conferences={this.state.filteredData} filter={this.state.filter} />
         </Paper>
       </MuiThemeProvider>
     );
