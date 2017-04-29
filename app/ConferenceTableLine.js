@@ -46,7 +46,7 @@ class ConferenceTableLine extends Component {
         <TableRowColumn style={this.rowStyle}>
           <TimeWrapper value={this.props.conference.dates.starting}/>
           <br/>
-          <TimeWrapper value={this.props.conference.dates.starting} relative />)
+          <TimeWrapper value={this.props.conference.dates.starting} relative />
         </TableRowColumn>
         <TableRowColumn style={this.rowStyle}>
           <TimeWrapper value={this.props.conference.dates.ending}/>
