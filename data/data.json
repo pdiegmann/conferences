@@ -10,6 +10,7 @@
 		},
 		"dates": {
 			"deadline": 1493942400000,
+			"notification": 1493942400000,
 			"starting": 1512864000000,
 			"ending": 1513123200000
 		},
@@ -32,6 +33,7 @@
 		},
 		"dates": {
 			"deadline": 1488326400000,
+			"notification": 1488326400000,
 			"starting": 1502323200000,
 			"ending": 1502496000000
 		},
@@ -55,6 +57,7 @@
 		},
 		"dates": {
 			"deadline": 1487376000000,
+			"notification": 1487376000000,
 			"starting": 1497916800000,
 			"ending": 1502496000000
 		},
@@ -78,6 +81,7 @@
 		},
 		"dates": {
 			"deadline": 1480723200000,
+			"notification": 1480723200000,
 			"starting": 1493942400000,
 			"ending": 1494374400000
 		},
@@ -101,6 +105,7 @@
 	  },
 	  "dates": {
 	    "deadline": 1481479360000,
+			"notification": 1481479360000,
 	    "starting": 1462726960000,
 	    "ending": 1481738560000
 	  },
@@ -124,6 +129,7 @@
 	  },
 	  "dates": {
 	    "deadline": 1489255664000,
+			"notification": 1489255664000,
 	    "starting": 1481047583000,
 	    "ending": 1488823606000
 	  },

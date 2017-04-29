@@ -93,10 +93,6 @@ class App extends Component {
       else return 0;
     });
 
-    console.log(filter);
-    console.log(data);
-    console.log(filteredData);
-
     this.setState({
       filter: filter,
       data: data,

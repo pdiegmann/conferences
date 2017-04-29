@@ -14,18 +14,49 @@ import ScheduleIcon from 'material-ui/svg-icons/action/schedule';
 import HomeIcon from 'material-ui/svg-icons/action/home';
 import AnnouncementIcon from 'material-ui/svg-icons/action/announcement';
 import ProgramIcon from 'material-ui/svg-icons/action/dashboard';
-import {red500, blue500} from 'material-ui/styles/colors';
+import {red500, blue500, amber100, deepOrange100, lime200} from 'material-ui/styles/colors';
 
 class ConferenceTableLine extends Component {
+  constructor(props) {
+    super(props);
+    this.rowStyle = {whiteSpace: 'normal', wordWrap: 'break-word'};
+  }
+
   render() {
+    let now = Date.now();
+    if (new Date(this.props.conference.dates.ending) < now) this.rowStyle.backgroundColor = deepOrange100;
+    else if (new Date(this.props.conference.dates.deadline) < now) this.rowStyle.backgroundColor = amber100;
+    else if (new Date(this.props.conference.dates.ending) <= now && new Date(this.props.conference.dates.starting) >= now) this.rowStyle.backgroundColor = lime200;
+
     return (
       <TableRow hoverable={true}>
-        <TableRowColumn>{this.props.conference.short} {this.props.conference.number}</TableRowColumn>
-        <TableRowColumn><TimeWrapper value={this.props.conference.dates.deadline}/> (<TimeWrapper value={this.props.conference.dates.deadline} relative />)</TableRowColumn>
-        <TableRowColumn><TimeWrapper value={this.props.conference.dates.starting}/> (<TimeWrapper value={this.props.conference.dates.starting} relative />)</TableRowColumn>
-        <TableRowColumn><TimeWrapper value={this.props.conference.dates.ending}/></TableRowColumn>
-        <TableRowColumn>{this.props.conference.location.city}, {this.props.conference.location.country}</TableRowColumn>
-        <TableRowColumn>
+        <TableRowColumn style={this.rowStyle}>
+          {this.props.conference.short} {this.props.conference.number}
+        </TableRowColumn>
+        <TableRowColumn style={this.rowStyle}>
+          <TimeWrapper value={this.props.conference.dates.deadline}/>
+          <br/>
+          <TimeWrapper value={this.props.conference.dates.deadline} relative />
+        </TableRowColumn>
+        <TableRowColumn style={this.rowStyle}>
+          <TimeWrapper value={this.props.conference.dates.notification}/>
+          <br/>
+          <TimeWrapper value={this.props.conference.dates.notification} relative />
+        </TableRowColumn>
+        <TableRowColumn style={this.rowStyle}>
+          <TimeWrapper value={this.props.conference.dates.starting}/>
+          <br/>
+          <TimeWrapper value={this.props.conference.dates.starting} relative />)
+        </TableRowColumn>
+        <TableRowColumn style={this.rowStyle}>
+          <TimeWrapper value={this.props.conference.dates.ending}/>
+          <br/>
+          <TimeWrapper value={this.props.conference.dates.ending} relative />
+        </TableRowColumn>
+        <TableRowColumn style={this.rowStyle}>
+          {this.props.conference.location.city}, {this.props.conference.location.country}
+        </TableRowColumn>
+        <TableRowColumn style={this.rowStyle}>
           <ExternalLink text={<HomeIcon color={blue500} hoverColor={red500} />} url={this.props.conference.urls.main} />
           <IconMenu
             iconButtonElement={<IconButton><LinkIcon color={blue500} hoverColor={red500} /></IconButton>}

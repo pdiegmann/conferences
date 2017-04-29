@@ -7,6 +7,7 @@ import MenuItem from 'material-ui/MenuItem';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
+import AddDialog from './AddDialog';
 
 const ALL = "ALL";
 
@@ -16,7 +17,8 @@ class Menu extends Component {
     this.state = {
       conference: this.props.filter.conference,
       timeline: this.props.filter.timeline,
-      region: this.props.filter.region
+      region: this.props.filter.region,
+      addDialogOpen: false
     };
   }
 
@@ -46,41 +48,54 @@ class Menu extends Component {
     });
   };
 
+  handleAddDialogOpen = () => {
+    this.setState({addDialogOpen: true});
+  };
+
+  handleAddDialogClose = () => {
+    this.setState({addDialogOpen: false});
+  };
+
   render() {
     return (
-      <Toolbar>
-        <ToolbarGroup firstChild={true}>
-          <ToolbarTitle style={{marginLeft:20}} text="IS Conferences" />
-        </ToolbarGroup>
+      <div>
+        <AddDialog open={this.state.addDialogOpen} handleClose={this.handleAddDialogClose} />
+        <Toolbar>
+          <ToolbarGroup firstChild={true}>
+            <ToolbarTitle style={{marginLeft:20}} text="IS Conferences" />
+          </ToolbarGroup>
 
-        <ToolbarGroup lastChild={true}>
-          <DropDownMenu value={this.state.timeline} onChange={this.handleTimelineChange}>
-            <MenuItem value={ALL} primaryText="All" />
-            <MenuItem value={"UPCOMING"} primaryText="All Upcoming" />
-            <MenuItem value={"PAST"} primaryText="All Past" />
-            <MenuItem value={"THIS_YEAR"} primaryText="This Year" />
-            <MenuItem value={"LAST_YEAR"} primaryText="Last Year" />
-            <MenuItem value={"DEADLINE_UPCOMING"} primaryText="All Upcoming Deadlines" />
-            <MenuItem value={"DEADLINE_THIS_YEAR"} primaryText="Deadline This Year" />
-          </DropDownMenu>
+          <ToolbarGroup lastChild={true}>
+            <RaisedButton label="Something missing or wrong?"  onTouchTap={this.handleAddDialogOpen} />
 
-          <DropDownMenu value={this.state.conference} multiple={true} onChange={this.handleConferenceChange}>
-            <MenuItem value={ALL} primaryText="All Conferences" />
-            <MenuItem value={"AMCIS"} primaryText="AMCIS" />
-            <MenuItem value={"ECIS"} primaryText="ECIS" />
-            <MenuItem value={"HICSS"} primaryText="HICSS" />
-            <MenuItem value={"ICIS"} primaryText="ICIS" />
-            <MenuItem value={"PACIS"} primaryText="PACIS" />
-          </DropDownMenu>
+            <DropDownMenu value={this.state.timeline} onChange={this.handleTimelineChange}>
+              <MenuItem value={ALL} primaryText="All" />
+              <MenuItem value={"UPCOMING"} primaryText="All Upcoming" />
+              <MenuItem value={"PAST"} primaryText="All Past" />
+              <MenuItem value={"THIS_YEAR"} primaryText="This Year" />
+              <MenuItem value={"LAST_YEAR"} primaryText="Last Year" />
+              <MenuItem value={"DEADLINE_UPCOMING"} primaryText="All Upcoming Deadlines" />
+              <MenuItem value={"DEADLINE_THIS_YEAR"} primaryText="Deadline This Year" />
+            </DropDownMenu>
 
-          <DropDownMenu value={this.state.region} multiple={true} onChange={this.handleRegionChange}>
-            <MenuItem value={ALL} primaryText="All Regions" />
-            <MenuItem value={1} primaryText="Region 1" />
-            <MenuItem value={2} primaryText="Region 2" />
-            <MenuItem value={3} primaryText="Region 3" />
-          </DropDownMenu>
-        </ToolbarGroup>
-      </Toolbar>
+            <DropDownMenu value={this.state.conference} multiple={true} onChange={this.handleConferenceChange}>
+              <MenuItem value={ALL} primaryText="All Conferences" />
+              <MenuItem value={"AMCIS"} primaryText="AMCIS" />
+              <MenuItem value={"ECIS"} primaryText="ECIS" />
+              <MenuItem value={"HICSS"} primaryText="HICSS" />
+              <MenuItem value={"ICIS"} primaryText="ICIS" />
+              <MenuItem value={"PACIS"} primaryText="PACIS" />
+            </DropDownMenu>
+
+            <DropDownMenu value={this.state.region} multiple={true} onChange={this.handleRegionChange}>
+              <MenuItem value={ALL} primaryText="All Regions" />
+              <MenuItem value={1} primaryText="Region 1" />
+              <MenuItem value={2} primaryText="Region 2" />
+              <MenuItem value={3} primaryText="Region 3" />
+            </DropDownMenu>
+          </ToolbarGroup>
+        </Toolbar>
+      </div>
     );
   }
 }

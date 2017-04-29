@@ -9,6 +9,7 @@ class ConferenceTableHeader extends Component {
         <TableRow hoverable={true}>
           <TableHeaderColumn>Name</TableHeaderColumn>
           <TableHeaderColumn>Deadline</TableHeaderColumn>
+          <TableHeaderColumn>Notificaion</TableHeaderColumn>
           <TableHeaderColumn>Starting</TableHeaderColumn>
           <TableHeaderColumn>Ending</TableHeaderColumn>
           <TableHeaderColumn>Location</TableHeaderColumn>
